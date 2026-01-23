@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Academic Homepage</title>
+  <meta name="description" content="Academic homepage of Your Name: background, research, working papers, and projects." />
+  <style>
+    :root{
+      --text:#111;
+      --muted:#555;
+      --border:#e8e8e8;
+      --link:#0b57d0;
+      --bg:#fff;
+      --card:#fafafa;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height:1.55;
+      color:var(--text);
+      background:var(--bg);
+    }
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:900px; margin:0 auto; padding:48px 20px}
+    header{display:flex; gap:18px; align-items:flex-start; justify-content:space-between; flex-wrap:wrap}
+    .title{min-width:260px}
+    h1{margin:0 0 6px; font-size:2rem; letter-spacing:-0.02em}
+    .sub{margin:0; color:var(--muted)}
+    .links{display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:14px}
+    .pill{
+      display:inline-block;
+      padding:6px 10px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      background:#fff;
+      font-size:0.95rem;
+      color:#222;
+    }
+    nav{margin-top:26px; display:flex; flex-wrap:wrap; gap:14px}
+    nav a{color:#222; border-bottom:1px dashed transparent}
+    nav a:hover{border-bottom-color:#222; text-decoration:none}
+    section{margin-top:34px}
+    h2{margin:0 0 12px; font-size:1.25rem}
+    p{margin:0 0 12px}
+    .grid{display:grid; grid-template-columns: 1fr; gap:12px}
+    @media (min-width: 860px){
+      .grid{grid-template-columns: 1fr 1fr}
+    }
+    .card{
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:14px 16px;
+      background:var(--card);
+    }
+    .item-title{font-weight:650}
+    .meta{color:var(--muted); font-size:0.95rem; margin-top:4px}
+    .actions{margin-top:8px; display:flex; flex-wrap:wrap; gap:10px}
+    .actions a{font-size:0.95rem}
+    ul{margin:0; padding-left:18px}
+    li{margin:8px 0}
+    .two-col{display:grid; grid-template-columns:1fr; gap:12px}
+    @media (min-width: 860px){
+      .two-col{grid-template-columns: 1fr 1fr}
+    }
+    footer{margin-top:46px; padding-top:14px; border-top:1px solid var(--border); color:var(--muted); font-size:0.95rem}
+    .kicker{font-size:0.95rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em}
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <header>
+      <div class="title">
+        <div class="kicker">Academic Homepage</div>
+        <h1>Your Name</h1>
+        <p class="sub">Position · Department · University</p>
+        <div class="links">
+          <a class="pill" href="mailto:you@university.edu">you@university.edu</a>
+          <a class="pill" href="cv.pdf">CV (PDF)</a>
+          <a class="pill" href="https://scholar.google.com/citations?user=YOURID">Google Scholar</a>
+          <a class="pill" href="https://github.com/YOURID">GitHub</a>
+          <a class="pill" href="https://www.linkedin.com/in/YOURID">LinkedIn</a>
+        </div>
+
+        <nav>
+          <a href="#background">Background</a>
+          <a href="#research">Research</a>
+          <a href="#working-papers">Working Papers</a>
+          <a href="#projects">Past Projects</a>
+        </nav>
+      </div>
+    </header>
+
+    <section id="background">
+      <h2>Background</h2>
+      <div class="two-col">
+        <div class="card">
+          <p>
+            Write 3–5 sentences. Include your discipline, what you work on, and what you’re known for.
+            Keep it concrete (methods + topics), not vague (“interested in many things”).
+          </p>
+          <p class="meta">
+            Current: Position, Department, University (City, Country)
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="item-title">Education</div>
+          <ul>
+            <li><strong>PhD</strong>, Field — University (Year–Year)</li>
+            <li><strong>MS</strong>, Field — University (Year–Year)</li>
+            <li><strong>BS</strong>, Field — University (Year–Year)</li>
+          </ul>
+          <div style="height:10px"></div>
+          <div class="item-title">Affiliations (optional)</div>
+          <ul>
+            <li>Lab / Center / Institute</li>
+            <li>Professional association</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Research Area</h2>
+      <div class="card">
+        <p>
+          One paragraph describing your research program: the problem space, your angle, and your methods.
+          Add 3–7 keywords that people actually search for in your field.
+        </p>
+        <p class="meta">
+          Keywords: Topic A · Topic B · Method C · Domain D · Dataset/Context E
+        </p>
+      </div>
+
+      <div class="grid" style="margin-top:12px">
+        <div class="card">
+          <div class="item-title">Primary Focus</div>
+          <ul>
+            <li>Specific question #1 you answer</li>
+            <li>Specific question #2 you answer</li>
+            <li>Specific question #3 you answer</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="item-title">Methods / Tools</div>
+          <ul>
+            <li>Method 1 (e.g., causal inference, field experiments, ML, theory)</li>
+            <li>Method 2</li>
+            <li>Method 3</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="working-papers">
+      <h2>Working Papers</h2>
+
+      <div class="card">
+        <div class="item-title">Paper Title #1</div>
+        <div class="meta">Your Name · Coauthor · Coauthor — Status: Working paper (Month Year)</div>
+        <p style="margin-top:10px">
+          2–3 line abstract: what you study, what you find (if applicable), and why it matters.
+        </p>
+        <div class="actions">
+          <a href="paper1.pdf">PDF</a>
+          <a href="https://arxiv.org/abs/XXXX.XXXXX">arXiv</a>
+          <a href="slides1.pdf">Slides</a>
+          <a href="https://github.com/...">Code</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="item-title">Paper Title #2</div>
+        <div class="meta">Your Name · Coauthor — Status: Under review / Draft (Month Year)</div>
+        <p style="margin-top:10px">
+          2–3 line abstract. Keep it concrete: setting, method, contribution.
+        </p>
+        <div class="actions">
+          <a href="paper2.pdf">PDF</a>
+          <a href="appendix2.pdf">Appendix</a>
+          <a href="https://osf.io/YOURID">OSF</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="item-title">Paper Title #3</div>
+        <div class="meta">Your Name — Status: In progress</div>
+        <p style="margin-top:10px">
+          1–2 lines describing the question and your planned contribution.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Past Projects</h2>
+
+      <div class="card">
+        <div class="item-title">Project Name #1</div>
+        <div class="meta">Year — Role: Lead / Contributor — Context: lab / company / collaboration</div>
+        <p style="margin-top:10px">
+          What you built/did, and what measurable outcome it produced (publication, dataset, tool, policy change,
+          deployed system, award, etc.).
+        </p>
+        <div class="actions">
+          <a href="https://github.com/...">Repository</a>
+          <a href="https://...">Project page</a>
+          <a href="poster1.pdf">Poster</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="item-title">Project Name #2</div>
+        <div class="meta">Year — Role — Outcome</div>
+        <p style="margin-top:10px">
+          One tight paragraph. Avoid padding. If it wasn’t meaningful, don’t list it.
+        </p>
+        <div class="actions">
+          <a href="https://...">Demo</a>
+          <a href="https://...">Write-up</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="item-title">Project Name #3</div>
+        <div class="meta">Year — Role — Outcome</div>
+        <ul style="margin-top:10px">
+          <li>Contribution 1 (specific)</li>
+          <li>Contribution 2 (specific)</li>
+          <li>Contribution 3 (specific)</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div>Last updated: <span id="last-updated"></span></div>
+      <div style="margin-top:6px">
+        This page is intentionally minimal. If you don’t keep it updated, remove sections rather than letting them rot.
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Auto-stamp today's date (YYYY-MM-DD)
+    document.getElementById("last-updated").textContent =
+      new Date().toISOString().slice(0, 10);
+  </script>
+</body>
+</html>
