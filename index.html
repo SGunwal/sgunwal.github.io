@@ -1,113 +1,10 @@
 <!doctype html>
 <html lang="en">
-<!-- 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Satender Gunwal — Academic Homepage</title>
-  <meta name="description" content="Academic homepage of Your Name: background, research, working papers, and projects." />
-  <style>
-    :root{
-      --text:#111;
-      --muted:#555;
-      --border:#e8e8e8;
-      --link:#0b57d0;
-      --bg:#fff;
-      --card:#fafafa;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      line-height:1.55;
-      color:var(--text);
-      background:var(--bg);
-    }
-    a{color:var(--link); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:900px; margin:0 auto; padding:48px 20px}
-    header{display:flex; gap:18px; align-items:flex-start; justify-content:space-between; flex-wrap:wrap}
-    .title{min-width:260px}
-    h1{margin:0 0 6px; font-size:2rem; letter-spacing:-0.02em}
-    .sub{margin:0; color:var(--muted)}
-    .links{display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:14px}
-    .pill{
-      display:inline-block;
-      padding:6px 10px;
-      border:1px solid var(--border);
-      border-radius:999px;
-      background:#fff;
-      font-size:0.95rem;
-      color:#222;
-    }
-    nav{margin-top:26px; display:flex; flex-wrap:wrap; gap:14px}
-    nav a{color:#222; border-bottom:1px dashed transparent}
-    nav a:hover{border-bottom-color:#222; text-decoration:none}
-    .tabbar{
-      margin-top:28px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      align-items:flex-end;
-      border-bottom:1px solid var(--border);
-      padding-bottom:10px;
-    }
-    .tab{
-      background:#1f1f1f;
-      color:#f5f5f5;
-      padding:10px 18px;
-      border:1px solid #1f1f1f;
-      border-bottom:none;
-      border-radius:10px 10px 0 0;
-      font-weight:600;
-      cursor:pointer;
-    }
-    .tab:hover{opacity:0.9}
-    .tab.is-active{
-      background:#fff;
-      color:#111;
-      border-color:var(--border);
-      box-shadow:0 -1px 0 #fff inset;
-    }
-    .tab-panel{
-      display:none;
-      padding-top:26px;
-    }
-    .tab-panel.is-active{display:block}
-    section{margin-top:34px}
-    h2{margin:0 0 12px; font-size:1.25rem}
-    p{margin:0 0 12px}
-    .grid{display:grid; grid-template-columns: 1fr; gap:12px}
-    @media (min-width: 860px){
-      .grid{grid-template-columns: 1fr 1fr}
-    }
-    .card{
-      border:1px solid var(--border);
-      border-radius:12px;
-      padding:14px 16px;
-      background:var(--card);
-    }
-    .item-title{font-weight:650}
-    .meta{color:var(--muted); font-size:0.95rem; margin-top:4px}
-    .actions{margin-top:8px; display:flex; flex-wrap:wrap; gap:10px}
-    .actions a{font-size:0.95rem}
-    ul{margin:0; padding-left:18px}
-    li{margin:8px 0}
-    .two-col{display:grid; grid-template-columns:1fr; gap:12px}
-    @media (min-width: 860px){
-      .two-col{grid-template-columns: 1fr 1fr}
-    }
-    footer{margin-top:46px; padding-top:14px; border-top:1px solid var(--border); color:var(--muted); font-size:0.95rem}
-    .kicker{font-size:0.95rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em}
-  </style>
-</head>
- -->
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Satender Gunwal — Academic Homepage</title>
-  <meta name="description" content="Academic homepage of Satender Gunwal: background, research, working papers, and projects." />
+  <meta name="description" content="Academic homepage of Satender Gunwal: background, research, teaching, and talks." />
   <style>
     :root{
       --text:#111;
@@ -136,7 +33,7 @@
       justify-content:space-between;
       flex-wrap:wrap;
     }
-    .title{min-width:260px}
+    .title{min-width:260px; flex:1}
     h1{margin:0 0 6px; font-size:2rem; letter-spacing:-0.02em}
     .sub{margin:0; color:var(--muted)}
     .links{display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:14px}
@@ -150,93 +47,126 @@
       color:#222;
     }
 
-    /* ===== Profile photo (extended options) ===== */
+    /* Profile photo */
     .header-right{flex-shrink:0}
-
-    /* Default: rounded-square */
     .profile-photo{
       width:140px;
       height:140px;
       object-fit:cover;
-      border-radius:14px;
+      border-radius:50%;
       border:1px solid var(--border);
       background:#fff;
       display:block;
     }
-
-    /* Option A: circle (add class "is-circle" to the <img>) */
-    .profile-photo.is-circle{
-      border-radius:50%;
-    }
-
-    /* Option B: larger photo (add class "is-lg" to the <img>) */
-    .profile-photo.is-lg{
-      width:170px;
-      height:170px;
-    }
-
-    /* Option C: smaller photo (add class "is-sm" to the <img>) */
-    .profile-photo.is-sm{
-      width:110px;
-      height:110px;
-    }
-
-    /* Option D: add subtle shadow (add class "has-shadow" to the <img>) */
-    .profile-photo.has-shadow{
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    }
-
-    /* Mobile: keep layout tidy */
     @media (max-width: 520px){
       .profile-photo{width:120px; height:120px}
-      .profile-photo.is-lg{width:140px; height:140px}
     }
-    /* ===== End profile photo options ===== */
 
-    nav{margin-top:26px; display:flex; flex-wrap:wrap; gap:14px}
-    nav a{color:#222; border-bottom:1px dashed transparent}
-    nav a:hover{border-bottom-color:#222; text-decoration:none}
-    section{margin-top:34px}
-    h2{margin:0 0 12px; font-size:1.25rem}
-    p{margin:0 0 12px}
-    .grid{display:grid; grid-template-columns: 1fr; gap:12px}
-    @media (min-width: 860px){
-      .grid{grid-template-columns: 1fr 1fr}
+    /* Tab bar (single line, your “lower line” format) */
+    .tabbar{
+      margin-top:26px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      border-bottom:1px solid var(--border);
+      padding-bottom:10px;
     }
+    .tab{
+      appearance:none;
+      border:1px solid var(--border);
+      background:#fff;
+      padding:8px 12px;
+      border-radius:10px;
+      font-size:0.98rem;
+      color:#222;
+      cursor:pointer;
+    }
+    .tab:hover{border-color:#cfcfcf}
+    .tab.is-active{
+      border-color:#bdbdbd;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+      font-weight:650;
+    }
+
+    /* Panels */
+    .tab-panel{display:none; margin-top:22px}
+    .tab-panel.is-active{display:block}
+
+    /* Layout primitives */
+    h2{margin:0 0 12px; font-size:1.25rem}
+    h3{margin:0 0 10px; font-size:1.05rem}
+    p{margin:0 0 12px}
+    .muted{color:var(--muted)}
     .card{
       border:1px solid var(--border);
       border-radius:12px;
       padding:14px 16px;
       background:var(--card);
     }
-    .item-title{font-weight:650}
-    .meta{color:var(--muted); font-size:0.95rem; margin-top:4px}
-    .actions{margin-top:8px; display:flex; flex-wrap:wrap; gap:10px}
-    .actions a{font-size:0.95rem}
-    ul{margin:0; padding-left:18px}
-    li{margin:8px 0}
+    .grid{display:grid; grid-template-columns:1fr; gap:12px}
+    @media (min-width: 860px){
+      .grid{grid-template-columns: 1fr 1fr}
+    }
+    .stack{display:grid; gap:12px}
     .two-col{display:grid; grid-template-columns:1fr; gap:12px}
     @media (min-width: 860px){
-      .two-col{grid-template-columns: 1fr 1fr}
+      .two-col{grid-template-columns: 1.1fr 0.9fr}
     }
-    footer{margin-top:46px; padding-top:14px; border-top:1px solid var(--border); color:var(--muted); font-size:0.95rem}
+
+    .item-title{font-weight:650}
+    .meta{color:var(--muted); font-size:0.95rem; margin-top:4px}
+    .actions{margin-top:10px; display:flex; flex-wrap:wrap; gap:10px}
+    .actions a{font-size:0.95rem}
+
+    ul{margin:0; padding-left:18px}
+    li{margin:8px 0}
+
+    /* Teaching blocks */
+    .course{
+      display:grid;
+      gap:6px;
+    }
+    .course-top{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:baseline;
+      justify-content:space-between;
+    }
+    .badge{
+      display:inline-block;
+      padding:2px 8px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      background:#fff;
+      color:#222;
+      font-size:0.85rem;
+    }
+
+    footer{
+      margin-top:46px;
+      padding-top:14px;
+      border-top:1px solid var(--border);
+      color:var(--muted);
+      font-size:0.95rem
+    }
     .kicker{font-size:0.95rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em}
+
+    /* Small quality-of-life */
+    .section{
+      margin-top:14px;
+    }
   </style>
 </head>
-
 
 <body>
   <main class="wrap">
     <header>
       <div class="title">
         <div class="kicker">Academic Homepage</div>
-    
         <h1>Satender Gunwal</h1>
-    
-        <p class="sub">
-          PhD Student · Information and Decision Sciences · University of Illinois Chicago
-        </p>
-    
+        <p class="sub">PhD Student · Information and Decision Sciences · University of Illinois Chicago</p>
+
         <div class="links">
           <a class="pill" href="mailto:saten3@uic.edu">saten3@uic.edu</a>
           <a class="pill" href="assets/cv/resume_doe.pdf" target="_blank" rel="noopener">CV (PDF)</a>
@@ -244,24 +174,14 @@
           <a class="pill" href="https://github.com/SGunwal" target="_blank" rel="noopener">GitHub</a>
           <a class="pill" href="https://www.linkedin.com/in/satendergunwal/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
-    
-        <nav>
-          <a href="#background">Background</a>
-          <a href="#research">Research</a>
-          <a href="#working-papers">Working Papers</a>
-          <a href="#publications">Publications</a>
-        </nav>
       </div>
-    
+
       <div class="header-right">
-        <img
-          src="assets/images/profile.jpg"
-          alt="Satender Gunwal"
-          class="profile-photo is-circle"
-        />
+        <img src="assets/images/profile.jpg" alt="Satender Gunwal" class="profile-photo" />
       </div>
     </header>
 
+    <!-- Single-line tab toggle -->
     <div class="tabbar" role="tablist" aria-label="Primary sections">
       <button class="tab is-active" role="tab" aria-selected="true" aria-controls="tab-home" data-tab="tab-home">Home</button>
       <button class="tab" role="tab" aria-selected="false" aria-controls="tab-research" data-tab="tab-research">Research</button>
@@ -269,68 +189,71 @@
       <button class="tab" role="tab" aria-selected="false" aria-controls="tab-talks" data-tab="tab-talks">Talks &amp; Conferences</button>
     </div>
 
-    <section id="tab-home" class="tab-panel is-active" role="tabpanel">
-      <h2>Background</h2>
-      <div class="two-col">
+    <!-- HOME -->
+    <section id="tab-home" class="tab-panel is-active" role="tabpanel" tabindex="0">
+      <div class="stack">
         <div class="card">
+          <h2>Background / Bio</h2>
           <p>
-            I am a PhD student in the Decision Sciences department at the University of Illinois Chicago, where I joined in Fall 2023. My research focuses on power systems, with an emphasis on developing long-term planning tools to modernize the electric grid in a reliable and scalable manner. I study how emerging demand patterns, such as large-scale data centers, affect grid planning and operations, and I leverage machine learning methods to support data-driven decision-making. Prior to joining UIC, I worked as a pre-doctoral research associate at the Indian Institute of Management Ahmedabad, India. There, my research focused on bilevel optimization formulations for hyperparameter optimization in machine learning.
+            I am a PhD student in the Decision Sciences department at the University of Illinois Chicago, where I joined in Fall 2023.
+            My research focuses on power systems, with an emphasis on developing long-term planning tools to modernize the electric grid
+            in a reliable and scalable manner. I study how emerging demand patterns, such as large-scale data centers, affect grid planning
+            and operations, and I leverage machine learning methods to support data-driven decision-making.
+          </p>
+          <p class="muted" style="margin:0">
+            Prior to joining UIC, I worked as a pre-doctoral research associate at the Indian Institute of Management Ahmedabad, India.
+            There, my research focused on bilevel optimization formulations for hyperparameter optimization in machine learning.
           </p>
         </div>
 
-        <div class="card">
-          <div class="item-title">Education</div>
-          <ul>
-            <li><strong>PhD</strong>, Decision Sciences — University of Illinois Chicago (2023–Present)</li>
-            <li><strong>BS-MS</strong>, Mathematical Sciences — Indian Institue of Science Education and Research (IISER) Mohali (2016–2021)</li>
-          </ul>
-          <div style="height:10px"></div>
-          <div class="item-title">Experience</div>
-          <ul>
-            <li>
-              <strong>Graduate Research Assistant</strong> — University of Illinois Chicago, Chicago, IL, USA (2023–Present)
-            </li>
-            <li>
-              <strong>Research Aide</strong> — Argonne National Laboratory, Lemont, IL, USA (2024)
-            </li>
-            <li>
-              <strong>Pre-doctoral Research Associate</strong> — Indian Institute of Management Ahmedabad, Ahmedabad, India (2021–2023)
-            </li>
-          </ul>
+        <div class="two-col">
+          <div class="card">
+            <h2>Research Interests</h2>
+            <p class="meta" style="margin-top:0">Keywords: Power Systems, Machine Learning, Long-term Planning, Spatial Reliability, Data Centers</p>
+            <ul>
+              <li>Long-term generation and transmission expansion planning</li>
+              <li>Reliability-aware planning and spatial equity in resource adequacy</li>
+              <li>Learning-augmented optimization for planning and operations</li>
+              <li>Grid impacts of large-scale demand (e.g., data centers)</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2>Education</h2>
+            <ul>
+              <li><strong>PhD</strong>, Decision Sciences — University of Illinois Chicago (2023–Present)</li>
+              <li><strong>BS-MS</strong>, Mathematical Sciences — Indian Institue of Science Education and Research (IISER) Mohali (2016–2021)</li>
+            </ul>
+
+            <div class="section"></div>
+
+            <h2>Experience</h2>
+            <ul>
+              <li><strong>Graduate Research Assistant</strong> — University of Illinois Chicago, Chicago, IL, USA (2023–Present)</li>
+              <li><strong>Research Aide</strong> — Argonne National Laboratory, Lemont, IL, USA (2024)</li>
+              <li><strong>Pre-doctoral Research Associate</strong> — Indian Institute of Management Ahmedabad, Ahmedabad, India (2021–2023)</li>
+            </ul>
+          </div>
         </div>
       </div>
-
-      <section id="research">
-        <h2>Research Interests</h2>
-        <div class="card">
-          <p>
-            Research Focus
-          </p>
-          <p class="meta">
-            Keywords: Power Systems, Machine Learning, Long-term Planning, Spatial Reliability, Data Centers
-          </p>
-        </div>
-      </section>
     </section>
 
-    <section id="tab-research" class="tab-panel" role="tabpanel">
-      <h2>Research</h2>
-      <div class="grid">
+    <!-- RESEARCH -->
+    <section id="tab-research" class="tab-panel" role="tabpanel" tabindex="0">
+      <div class="stack">
         <div class="card">
-          <div class="item-title">Published Papers</div>
-          <div style="height:8px"></div>
+          <h2>Published Papers</h2>
+
           <div class="item-title">A linear programming-based hyper local search for tuning hyperparameters</div>
           <div class="meta">
-            Ankur Sinha · Satender Gunwal
-            <br />
+            Ankur Sinha · Satender Gunwal<br/>
             <em>Operations Research Letters</em>, Volume 61, July 2025, Article 107287
           </div>
           <p style="margin-top:10px">
             We propose a linear programming–based “hyper local search” method for hyperparameter tuning.
-            By formulating hyperparameter optimization as a bilevel program, the approach identifies a
-            local descent direction to improve validation loss and simultaneously fine-tunes continuous
-            hyperparameters and model parameters near an initial trained model. We demonstrate the approach across
-            regression, machine learning, and deep learning tasks.
+            By formulating hyperparameter optimization as a bilevel program, the approach identifies a local descent direction
+            to improve validation loss and simultaneously fine-tunes continuous hyperparameters and model parameters near an initial trained model.
+            We demonstrate the approach across regression, machine learning, and deep learning tasks.
           </p>
           <div class="actions">
             <a href="https://doi.org/10.1016/j.orl.2025.107287" target="_blank" rel="noopener">DOI</a>
@@ -339,107 +262,147 @@
         </div>
 
         <div class="card">
-          <div class="item-title">Under Review / Working Papers</div>
-          <div style="height:8px"></div>
+          <h2>Under Review / Working Papers</h2>
+
           <div class="item-title">Learning-Augmented Power System Expansion Planning for Spatial Reliability</div>
           <div class="meta">Satender Gunwal · Selvaprabu Nadarajah · Todd Levin — Status: Working paper</div>
           <p style="margin-top:10px">
-            We study long-term generation and transmission expansion planning where deterministic investment models are evaluated ex post for probabilistic resource adequacy, a practice that can overlook spatial reliability.
-            We show that a machine learning–based reliability feedback can uncover expansion plans that dramatically reduce outages and rebalance reliability across regions at minimal additional cost, without introducing stochastic planning complexity.
-            This matters because it gives planners and regulators a tractable way to prevent chronically under-served areas and reduce systemic risk while preserving existing planning workflows.
+            We study long-term generation and transmission expansion planning where deterministic investment models are evaluated ex post
+            for probabilistic resource adequacy, a practice that can overlook spatial reliability. We show that a machine learning–based
+            reliability feedback can uncover expansion plans that dramatically reduce outages and rebalance reliability across regions
+            at minimal additional cost, without introducing stochastic planning complexity.
+          </p>
+          <!-- Optional links area (add when you have them) -->
+          <!--
+          <div class="actions">
+            <a href="#" target="_blank" rel="noopener">Preprint</a>
+            <a href="#" target="_blank" rel="noopener">Code</a>
+          </div>
+          -->
+        </div>
+
+        <div class="card">
+          <h2>Work In-Progress</h2>
+          <ul>
+            <li><strong>Project title #1</strong> — 1–2 line summary of the question and your planned contribution.</li>
+            <li><strong>Project title #2</strong> — 1–2 line summary of the data/method and current stage.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEACHING -->
+    <section id="tab-teaching" class="tab-panel" role="tabpanel" tabindex="0">
+      <div class="stack">
+        <div class="card">
+          <h2>Teaching</h2>
+          <p class="muted" style="margin-top:0">
+            I co-developed two courses with my advisor and served as the Teaching Assistant for both in the subsequent semester at the University of Illinois Chicago.
           </p>
         </div>
 
-        <div class="card">
-          <div class="item-title">Work In-Progress</div>
-          <ul>
-            <li>Project title #1 — 1–2 line summary of the question and your planned contribution.</li>
-            <li>Project title #2 — 1–2 line summary of the data/method and current stage.</li>
-          </ul>
+        <div class="grid">
+          <div class="card course">
+            <div class="course-top">
+              <div class="item-title">Course 1 Title</div>
+              <span class="badge">Co-developed</span>
+            </div>
+            <div class="meta">University of Illinois Chicago · Term/Year (Development)</div>
+            <ul>
+              <li>Designed syllabus structure, assignments, and grading rubric.</li>
+              <li>Built problem sets / labs to support core learning objectives.</li>
+              <li>Iterated content based on student feedback and outcomes.</li>
+            </ul>
+            <div class="actions">
+              <!-- Add real links when available -->
+              <!-- <a href="#" target="_blank" rel="noopener">Syllabus</a> -->
+              <!-- <a href="#" target="_blank" rel="noopener">Course page</a> -->
+            </div>
+          </div>
+
+          <div class="card course">
+            <div class="course-top">
+              <div class="item-title">Course 1 Title</div>
+              <span class="badge">Teaching Assistant</span>
+            </div>
+            <div class="meta">University of Illinois Chicago · Term/Year (TA)</div>
+            <ul>
+              <li>Led discussion sections / office hours; clarified key concepts.</li>
+              <li>Created solutions and supported grading at scale with consistency.</li>
+              <li>Supported final project guidance and evaluation.</li>
+            </ul>
+          </div>
+
+          <div class="card course">
+            <div class="course-top">
+              <div class="item-title">Course 2 Title</div>
+              <span class="badge">Co-developed</span>
+            </div>
+            <div class="meta">University of Illinois Chicago · Term/Year (Development)</div>
+            <ul>
+              <li>Co-created lecture materials and in-class activities.</li>
+              <li>Developed assessments aligned with course competencies.</li>
+              <li>Maintained course infrastructure (LMS, submissions, feedback).</li>
+            </ul>
+          </div>
+
+          <div class="card course">
+            <div class="course-top">
+              <div class="item-title">Course 2 Title</div>
+              <span class="badge">Teaching Assistant</span>
+            </div>
+            <div class="meta">University of Illinois Chicago · Term/Year (TA)</div>
+            <ul>
+              <li>Mentored students on homework and project implementation.</li>
+              <li>Coordinated logistics and communication for the class.</li>
+              <li>Improved clarity of assignments and evaluation criteria.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="tab-teaching" class="tab-panel" role="tabpanel">
-      <h2>Teaching</h2>
-      <div class="card">
-        <div class="item-title">Teaching Assistant Experience</div>
-        <p style="margin-top:10px">
-          I co-developed two courses with my advisor and served as the Teaching Assistant for both in the
-          subsequent semester at the University of Illinois Chicago.
-        </p>
-        <ul>
-          <li><strong>Course 1</strong> — Co-developed with advisor; TA the following semester (Term/Year).</li>
-          <li><strong>Course 2</strong> — Co-developed with advisor; TA the following semester (Term/Year).</li>
-        </ul>
+    <!-- TALKS -->
+    <section id="tab-talks" class="tab-panel" role="tabpanel" tabindex="0">
+      <div class="stack">
+        <div class="card">
+          <h2>Talks &amp; Conferences</h2>
+          <p class="muted" style="margin-top:0">
+            Add talks, posters, sessions, and links to slides/papers when available.
+          </p>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Conference Presentations</h3>
+            <ul>
+              <li>
+                <strong>Conference Name</strong> — City, Country · Month Year<br/>
+                <span class="muted">Talk/Poster title</span>
+                <!-- Optional links -->
+                <!-- <div class="actions"><a href="#" target="_blank" rel="noopener">Slides</a></div> -->
+              </li>
+              <li>
+                <strong>Conference Name</strong> — City, Country · Month Year<br/>
+                <span class="muted">Talk/Poster title</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Service</h3>
+            <ul>
+              <li>
+                <strong>INFORMS</strong> — Session Chair · Conference Name/Track · City, Country · Month Year
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
-
-    <section id="tab-talks" class="tab-panel" role="tabpanel">
-      <h2>Talks &amp; Conferences</h2>
-      <div class="grid">
-        <div class="card">
-          <div class="item-title">Conference Presentations</div>
-          <ul>
-            <li><strong>Conference Name</strong> — City, Country · Month Year · Talk title or poster title.</li>
-            <li><strong>Conference Name</strong> — City, Country · Month Year · Talk title or poster title.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <div class="item-title">Service</div>
-          <ul>
-            <li><strong>INFORMS</strong> — Session Chair · Conference Name/Track · City, Country · Month Year.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    
-<!-- 
-    <section id="projects">
-      <h2>Past Projects</h2>
-
-      <div class="card">
-        <div class="item-title">Project Name #1</div>
-        <div class="meta">Year — Role: Lead / Contributor — Context: lab / company / collaboration</div>
-        <p style="margin-top:10px">
-          What you built/did, and what measurable outcome it produced (publication, dataset, tool, policy change,
-          deployed system, award, etc.).
-        </p>
-        <div class="actions">
-          <a href="https://github.com/...">Repository</a>
-          <a href="https://...">Project page</a>
-          <a href="poster1.pdf">Poster</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="item-title">Project Name #2</div>
-        <div class="meta">Year — Role — Outcome</div>
-        <p style="margin-top:10px">
-          One tight paragraph. Avoid padding. If it wasn’t meaningful, don’t list it.
-        </p>
-        <div class="actions">
-          <a href="https://...">Demo</a>
-          <a href="https://...">Write-up</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="item-title">Project Name #3</div>
-        <div class="meta">Year — Role — Outcome</div>
-        <ul style="margin-top:10px">
-          <li>Contribution 1 (specific)</li>
-          <li>Contribution 2 (specific)</li>
-          <li>Contribution 3 (specific)</li>
-        </ul>
-      </div>
-    </section> -->
 
     <footer>
       <div>Last updated: <span id="last-updated"></span></div>
-      <div style="margin-top:6px">
-        <!-- This page is intentionally minimal. If you don’t keep it updated, remove sections rather than letting them rot. -->
-      </div>
     </footer>
   </main>
 
@@ -448,22 +411,51 @@
     document.getElementById("last-updated").textContent =
       new Date().toISOString().slice(0, 10);
 
-    // Tabs: simple toggle behavior
+    // Tabs: toggle behavior
     const tabs = document.querySelectorAll(".tab");
     const panels = document.querySelectorAll(".tab-panel");
-    tabs.forEach((tab) => {
-      tab.addEventListener("click", () => {
-        const target = tab.getAttribute("data-tab");
-        tabs.forEach((t) => {
-          const isActive = t === tab;
-          t.classList.toggle("is-active", isActive);
-          t.setAttribute("aria-selected", isActive ? "true" : "false");
-        });
-        panels.forEach((panel) => {
-          panel.classList.toggle("is-active", panel.id === target);
-        });
+
+    function activateTab(tab) {
+      const target = tab.getAttribute("data-tab");
+
+      tabs.forEach((t) => {
+        const isActive = t === tab;
+        t.classList.toggle("is-active", isActive);
+        t.setAttribute("aria-selected", isActive ? "true" : "false");
       });
+
+      panels.forEach((panel) => {
+        const isActive = panel.id === target;
+        panel.classList.toggle("is-active", isActive);
+      });
+
+      // Move focus into active panel for accessibility
+      const activePanel = document.getElementById(target);
+      if (activePanel) activePanel.focus({ preventScroll: false });
+    }
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => activateTab(tab));
     });
+
+    // Optional: deep-link via hash (#home, #research, etc.)
+    // If you want this, use hashes like: #home #research #teaching #talks
+    const hashToTab = {
+      "#home": "tab-home",
+      "#research": "tab-research",
+      "#teaching": "tab-teaching",
+      "#talks": "tab-talks"
+    };
+
+    function syncFromHash() {
+      const mapped = hashToTab[window.location.hash];
+      if (!mapped) return;
+      const tab = Array.from(tabs).find(t => t.getAttribute("data-tab") === mapped);
+      if (tab) activateTab(tab);
+    }
+
+    window.addEventListener("hashchange", syncFromHash);
+    syncFromHash();
   </script>
 </body>
 </html>
