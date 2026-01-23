@@ -6,13 +6,22 @@
   <title>Satender Gunwal — Academic Homepage</title>
   <meta name="description" content="Academic homepage of Satender Gunwal: background, research, teaching, and talks." />
   <style>
-    :root{
+    /* :root{
       --text:#111;
       --muted:#555;
       --border:#e8e8e8;
       --link:#0b57d0;
       --bg:#fff;
       --card:#fafafa;
+    } */
+    :root{
+      --bg: #f6f5f3;          /* warm paper background */
+      --card: #ffffff;       /* clean cards */
+      --text: #1f2933;       /* soft charcoal */
+      --muted: #5f6c7b;      /* calm slate gray */
+      --border: #e2e4e8;     /* subtle separators */
+      --link: #3b5ccc;       /* muted academic blue */
+      --accent: #e8ebf5;     /* soft highlight */
     }
     *{box-sizing:border-box}
     body{
@@ -83,10 +92,15 @@
     }
     .tab:hover{border-color:#cfcfcf}
     .tab.is-active{
+                  background: var(--accent);
+                  border-color: #cfd5ea;
+                  font-weight: 650;
+                }
+    /* .tab.is-active{
       border-color:#bdbdbd;
       box-shadow: 0 1px 0 rgba(0,0,0,0.04);
       font-weight:650;
-    }
+    } */
 
     /* Panels */
     .tab-panel{display:none; margin-top:22px}
@@ -187,6 +201,7 @@
       <button class="tab" role="tab" aria-selected="false" aria-controls="tab-research" data-tab="tab-research">Research</button>
       <button class="tab" role="tab" aria-selected="false" aria-controls="tab-teaching" data-tab="tab-teaching">Teaching</button>
       <button class="tab" role="tab" aria-selected="false" aria-controls="tab-talks" data-tab="tab-talks">Talks &amp; Conferences</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-cv" data-tab="tab-cv">Curriculum Vitae</button>
     </div>
 
     <!-- HOME -->
@@ -401,6 +416,38 @@
       </div>
     </section>
 
+    <!-- CURRICULUM VITAE -->
+    <section id="tab-cv" class="tab-panel" role="tabpanel" tabindex="0">
+      <div class="stack">
+        <div class="card">
+          <h2>Curriculum Vitae</h2>
+          <p class="muted" style="margin-top:0">
+            If the embed doesn’t load in your browser, use the download link.
+          </p>
+          <div class="actions">
+            <a href="assets/cv/resume_doe.pdf" target="_blank" rel="noopener">Open CV (PDF)</a>
+            <a href="assets/cv/resume_doe.pdf" download>Download</a>
+          </div>
+        </div>
+
+        <div class="card" style="padding:0; overflow:hidden">
+          <!-- Best compatibility: use <object>. If it fails, fallback link shows. -->
+          <object
+            data="assets/cv/resume_doe.pdf"
+            type="application/pdf"
+            width="100%"
+            height="900"
+            style="display:block; border:0"
+          >
+            <p style="padding:14px 16px; margin:0">
+              Your browser can’t display PDFs inline.
+              <a href="assets/cv/resume_doe.pdf" target="_blank" rel="noopener">Open the PDF</a>.
+            </p>
+          </object>
+        </div>
+      </div>
+    </section>
+
     <footer>
       <div>Last updated: <span id="last-updated"></span></div>
     </footer>
@@ -430,8 +477,11 @@
       });
 
       // Move focus into active panel for accessibility
+      // const activePanel = document.getElementById(target);
+      // if (activePanel) activePanel.focus({ preventScroll: false });
+      // Optional: focus without scrolling
       const activePanel = document.getElementById(target);
-      if (activePanel) activePanel.focus({ preventScroll: false });
+      if (activePanel) activePanel.focus({ preventScroll: true });
     }
 
     tabs.forEach((tab) => {
@@ -444,7 +494,8 @@
       "#home": "tab-home",
       "#research": "tab-research",
       "#teaching": "tab-teaching",
-      "#talks": "tab-talks"
+      "#talks": "tab-talks",
+      "#cv": "tab-cv"
     };
 
     function syncFromHash() {
