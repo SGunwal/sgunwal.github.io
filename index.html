@@ -43,6 +43,37 @@
     nav{margin-top:26px; display:flex; flex-wrap:wrap; gap:14px}
     nav a{color:#222; border-bottom:1px dashed transparent}
     nav a:hover{border-bottom-color:#222; text-decoration:none}
+    .tabbar{
+      margin-top:28px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:flex-end;
+      border-bottom:1px solid var(--border);
+      padding-bottom:10px;
+    }
+    .tab{
+      background:#1f1f1f;
+      color:#f5f5f5;
+      padding:10px 18px;
+      border:1px solid #1f1f1f;
+      border-bottom:none;
+      border-radius:10px 10px 0 0;
+      font-weight:600;
+      cursor:pointer;
+    }
+    .tab:hover{opacity:0.9}
+    .tab.is-active{
+      background:#fff;
+      color:#111;
+      border-color:var(--border);
+      box-shadow:0 -1px 0 #fff inset;
+    }
+    .tab-panel{
+      display:none;
+      padding-top:26px;
+    }
+    .tab-panel.is-active{display:block}
     section{margin-top:34px}
     h2{margin:0 0 12px; font-size:1.25rem}
     p{margin:0 0 12px}
@@ -231,16 +262,20 @@
       </div>
     </header>
 
-    <section id="background">
+    <div class="tabbar" role="tablist" aria-label="Primary sections">
+      <button class="tab is-active" role="tab" aria-selected="true" aria-controls="tab-home" data-tab="tab-home">Home</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-research" data-tab="tab-research">Research</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-teaching" data-tab="tab-teaching">Teaching</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-talks" data-tab="tab-talks">Talks &amp; Conferences</button>
+    </div>
+
+    <section id="tab-home" class="tab-panel is-active" role="tabpanel">
       <h2>Background</h2>
       <div class="two-col">
         <div class="card">
           <p>
-            I am a PhD student in the Decision Sciences department at the University of Illinois Chicago, where I joined in Fall 2023. My research focuses on power systems, with an emphasis on developing long-term planning tools to modernize the electric grid in a reliable and scalable manner. I study how emerging demand patterns, such as large-scale data centers, affect grid planning and operations, and I leverage machine learning methods to support data-driven decision-making.Prior to joining UIC, I worked as a pre-doctoral research associate at the Indian Institute of Management Ahmedabad, India. There, my research focused on bilevel optimization formulations for hyperparameter optimization in machine learning.
+            I am a PhD student in the Decision Sciences department at the University of Illinois Chicago, where I joined in Fall 2023. My research focuses on power systems, with an emphasis on developing long-term planning tools to modernize the electric grid in a reliable and scalable manner. I study how emerging demand patterns, such as large-scale data centers, affect grid planning and operations, and I leverage machine learning methods to support data-driven decision-making. Prior to joining UIC, I worked as a pre-doctoral research associate at the Indian Institute of Management Ahmedabad, India. There, my research focused on bilevel optimization formulations for hyperparameter optimization in machine learning.
           </p>
-          <!-- <p class="meta">
-            Current: Position, Department, University (City, Country)
-          </p> -->
         </div>
 
         <div class="card">
@@ -248,128 +283,113 @@
           <ul>
             <li><strong>PhD</strong>, Decision Sciences — University of Illinois Chicago (2023–Present)</li>
             <li><strong>BS-MS</strong>, Mathematical Sciences — Indian Institue of Science Education and Research (IISER) Mohali (2016–2021)</li>
-            <!-- <li><strong>BS</strong>, Field — University (Year–Year)</li> -->
           </ul>
           <div style="height:10px"></div>
           <div class="item-title">Experience</div>
           <ul>
             <li>
-              <strong>Graduate Research Assistant</strong> - University of Illinois Chicago, Chicago, IL, USA (2023-Present)<br />
+              <strong>Graduate Research Assistant</strong> — University of Illinois Chicago, Chicago, IL, USA (2023–Present)
             </li>
             <li>
-              <strong>Research Aide</strong> - Argonne National Laboratory, Lemont, IL, USA (2024)<br />
+              <strong>Research Aide</strong> — Argonne National Laboratory, Lemont, IL, USA (2024)
             </li>
             <li>
-              <strong>Pre-doctoral Research Associate</strong> - Indian Institute of Management Ahmedabad, Ahmedabad, India (2021-2023)<br />
+              <strong>Pre-doctoral Research Associate</strong> — Indian Institute of Management Ahmedabad, Ahmedabad, India (2021–2023)
             </li>
+          </ul>
+        </div>
+      </div>
+
+      <section id="research">
+        <h2>Research Interests</h2>
+        <div class="card">
+          <p>
+            Research Focus
+          </p>
+          <p class="meta">
+            Keywords: Power Systems, Machine Learning, Long-term Planning, Spatial Reliability, Data Centers
+          </p>
+        </div>
+      </section>
+    </section>
+
+    <section id="tab-research" class="tab-panel" role="tabpanel">
+      <h2>Research</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="item-title">Published Papers</div>
+          <div style="height:8px"></div>
+          <div class="item-title">A linear programming-based hyper local search for tuning hyperparameters</div>
+          <div class="meta">
+            Ankur Sinha · Satender Gunwal
+            <br />
+            <em>Operations Research Letters</em>, Volume 61, July 2025, Article 107287
+          </div>
+          <p style="margin-top:10px">
+            We propose a linear programming–based “hyper local search” method for hyperparameter tuning.
+            By formulating hyperparameter optimization as a bilevel program, the approach identifies a
+            local descent direction to improve validation loss and simultaneously fine-tunes continuous
+            hyperparameters and model parameters near an initial trained model. We demonstrate the approach across
+            regression, machine learning, and deep learning tasks.
+          </p>
+          <div class="actions">
+            <a href="https://doi.org/10.1016/j.orl.2025.107287" target="_blank" rel="noopener">DOI</a>
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167637725000483" target="_blank" rel="noopener">ScienceDirect</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="item-title">Under Review / Working Papers</div>
+          <div style="height:8px"></div>
+          <div class="item-title">Learning-Augmented Power System Expansion Planning for Spatial Reliability</div>
+          <div class="meta">Satender Gunwal · Selvaprabu Nadarajah · Todd Levin — Status: Working paper</div>
+          <p style="margin-top:10px">
+            We study long-term generation and transmission expansion planning where deterministic investment models are evaluated ex post for probabilistic resource adequacy, a practice that can overlook spatial reliability.
+            We show that a machine learning–based reliability feedback can uncover expansion plans that dramatically reduce outages and rebalance reliability across regions at minimal additional cost, without introducing stochastic planning complexity.
+            This matters because it gives planners and regulators a tractable way to prevent chronically under-served areas and reduce systemic risk while preserving existing planning workflows.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="item-title">Work In-Progress</div>
+          <ul>
+            <li>Project title #1 — 1–2 line summary of the question and your planned contribution.</li>
+            <li>Project title #2 — 1–2 line summary of the data/method and current stage.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section id="research">
-      <h2>Research Area</h2>
+    <section id="tab-teaching" class="tab-panel" role="tabpanel">
+      <h2>Teaching</h2>
       <div class="card">
-        <p>
-          Research Focus 
+        <div class="item-title">Teaching Assistant Experience</div>
+        <p style="margin-top:10px">
+          I co-developed two courses with my advisor and served as the Teaching Assistant for both in the
+          subsequent semester at the University of Illinois Chicago.
         </p>
-        <p class="meta">
-          Keywords: Power Systems, Machine Learning, Long-term Planning, Spatial Reliability, Data Centers
-        </p>
+        <ul>
+          <li><strong>Course 1</strong> — Co-developed with advisor; TA the following semester (Term/Year).</li>
+          <li><strong>Course 2</strong> — Co-developed with advisor; TA the following semester (Term/Year).</li>
+        </ul>
       </div>
-
-      <!-- <div class="grid" style="margin-top:12px">
-        <div class="card">
-          <div class="item-title">Primary Focus</div>
-          <ul>
-            <li>Specific question #1 you answer</li>
-            <li>Specific question #2 you answer</li>
-            <li>Specific question #3 you answer</li>
-          </ul>
-        </div>
-        <div class="card">
-          <div class="item-title">Methods / Tools</div>
-          <ul>
-            <li>Method 1 (e.g., causal inference, field experiments, ML, theory)</li>
-            <li>Method 2</li>
-            <li>Method 3</li>
-          </ul>
-        </div>
-      </div> -->
     </section>
 
-    <section id="working-papers">
-      <h2>Working Papers</h2>
-
-      <div class="card">
-        <div class="item-title">Learning-Augmented Power System Expansion
-          Planning for Spatial Reliability</div>
-        <div class="meta">Satender Gunwal· Selvaprabu Nadarajah · Todd Levin — Status: Working paper</div>
-        <p style="margin-top:10px">
-          We study long-term generation and transmission expansion planning where deterministic investment models are evaluated ex post for probabilistic resource adequacy, a practice that can overlook spatial reliability. 
-          We show that a machine learning–based reliability feedback can uncover expansion plans that dramatically reduce outages and rebalance reliability across regions at minimal additional cost, without introducing stochastic planning complexity. 
-          This matters because it gives planners and regulators a tractable way to prevent chronically under-served areas and reduce systemic risk while preserving existing planning workflows.
-        </p>
-        <!-- <div class="actions">
-          <a href="paper1.pdf">PDF</a>
-          <a href="https://arxiv.org/abs/XXXX.XXXXX">arXiv</a>
-          <a href="slides1.pdf">Slides</a>
-          <a href="https://github.com/...">Code</a>
-        </div> -->
-      </div>
-
-      <!-- <div class="card">
-        <div class="item-title">Paper Title #2</div>
-        <div class="meta">Your Name · Coauthor — Status: Under review / Draft (Month Year)</div>
-        <p style="margin-top:10px">
-          2–3 line abstract. Keep it concrete: setting, method, contribution.
-        </p>
-        <div class="actions">
-          <a href="paper2.pdf">PDF</a>
-          <a href="appendix2.pdf">Appendix</a>
-          <a href="https://osf.io/YOURID">OSF</a>
+    <section id="tab-talks" class="tab-panel" role="tabpanel">
+      <h2>Talks &amp; Conferences</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="item-title">Conference Presentations</div>
+          <ul>
+            <li><strong>Conference Name</strong> — City, Country · Month Year · Talk title or poster title.</li>
+            <li><strong>Conference Name</strong> — City, Country · Month Year · Talk title or poster title.</li>
+          </ul>
         </div>
-      </div>
-
-      <div class="card">
-        <div class="item-title">Paper Title #3</div>
-        <div class="meta">Your Name — Status: In progress</div>
-        <p style="margin-top:10px">
-          1–2 lines describing the question and your planned contribution.
-        </p>
-      </div>
-    </section> -->
-
-    <section id="publications">
-      <h2>Publications</h2>
-    
-      <div class="card">
-        <div class="item-title">
-          A linear programming-based hyper local search for tuning hyperparameters
-        </div>
-    
-        <div class="meta">
-          Ankur Sinha · Satender Gunwal
-          <br />
-          <em>Operations Research Letters</em>, Volume 61, July 2025, Article 107287
-        </div>
-    
-        <p style="margin-top:10px">
-          We propose a linear programming–based “hyper local search” method for hyperparameter tuning.
-          By formulating hyperparameter optimization as a bilevel program, the approach identifies a
-          local descent direction to improve validation loss and simultaneously fine-tunes continuous
-          hyperparameters and model parameters near an initial trained model. We demonstrate the approach across
-          regression, machine learning, and deep learning tasks.
-        </p>
-    
-        <div class="actions">
-          <a href="https://doi.org/10.1016/j.orl.2025.107287" target="_blank" rel="noopener">DOI</a>
-          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167637725000483" target="_blank" rel="noopener">ScienceDirect</a>
-          <!-- Optional:
-          <a href="assets/papers/orl2025-hls.pdf">PDF</a>
-          <a href="assets/slides/orl2025-hls-slides.pdf">Slides</a>
-          <a href="https://github.com/YOUR_REPO">Code</a>
-          -->
+        <div class="card">
+          <div class="item-title">Service</div>
+          <ul>
+            <li><strong>INFORMS</strong> — Session Chair · Conference Name/Track · City, Country · Month Year.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -427,6 +447,23 @@
     // Auto-stamp today's date (YYYY-MM-DD)
     document.getElementById("last-updated").textContent =
       new Date().toISOString().slice(0, 10);
+
+    // Tabs: simple toggle behavior
+    const tabs = document.querySelectorAll(".tab");
+    const panels = document.querySelectorAll(".tab-panel");
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const target = tab.getAttribute("data-tab");
+        tabs.forEach((t) => {
+          const isActive = t === tab;
+          t.classList.toggle("is-active", isActive);
+          t.setAttribute("aria-selected", isActive ? "true" : "false");
+        });
+        panels.forEach((panel) => {
+          panel.classList.toggle("is-active", panel.id === target);
+        });
+      });
+    });
   </script>
 </body>
 </html>
